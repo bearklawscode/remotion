@@ -1,0 +1,42 @@
+@import "tailwindcss";
+/* Force-scan all source (auto-detection misses src/screens under the monorepo git root) */
+@source "./**/*.{ts,tsx}";
+
+/* Brand tokens (light mode) — mirror of minor-os tailwind.config.ts, in v4 @theme syntax.
+   Defining a --color-* makes bg-*, text-*, ring-*, border-* + opacity modifiers all work. */
+@theme {
+  --color-paper: #fbf6f0;
+  --color-surface: #ffffff;
+  --color-ink: #13213c;
+  --color-ink-soft: #3d4a66;
+  --color-mist: #a4a2ac;
+  --color-cadet: #96cfd4;
+  --color-gold: #a08a4f;
+  --color-gold-soft: #c8b37e;
+  --color-success: #3e7c59;
+  --color-alert: #b4562f;
+
+  --font-display: "Archivo Black", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-serif: "Newsreader", serif;
+  --font-script: "Caveat", cursive;
+
+  --shadow-card: 0 1px 2px rgba(19, 33, 60, 0.04), 0 8px 24px rgba(19, 33, 60, 0.06);
+  --shadow-card-lg: 0 2px 4px rgba(19, 33, 60, 0.05), 0 16px 44px rgba(19, 33, 60, 0.1);
+  --shadow-pop: 0 20px 60px rgba(19, 33, 60, 0.16);
+}
+
+/* Custom utilities the ported components rely on */
+@utility border-hairline {
+  border-color: rgba(19, 33, 60, 0.1);
+}
+@utility bg-wash {
+  background-image: linear-gradient(180deg, rgba(160, 138, 79, 0.08), rgba(160, 138, 79, 0));
+}
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

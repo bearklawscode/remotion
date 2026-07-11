@@ -1,0 +1,26 @@
+{
+  "name": "meridian-videos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Meridian pitch films — Remotion compositions (Video 1: Why, Video 2: What)",
+  "scripts": {
+    "dev": "remotion studio",
+    "render:v1": "remotion render Video1 out/Meridian_Video1.mp4",
+    "render:v2": "remotion render Video2 out/Meridian_Video2.mp4",
+    "still": "remotion still"
+  },
+  "dependencies": {
+    "@remotion/google-fonts": "4.0.400",
+    "@remotion/shapes": "4.0.400",
+    "@remotion/tailwind-v4": "4.0.400",
+    "lucide-react": "0.469.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.400"
+  },
+  "devDependencies": {
+    "@remotion/cli": "4.0.400",
+    "@types/react": "19.0.0",
+    "typescript": "5.7.3"
+  }
+}

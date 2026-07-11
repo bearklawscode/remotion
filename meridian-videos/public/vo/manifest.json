@@ -1,0 +1,188 @@
+{
+  "voice_id": "Xb7hH8MSUJpSbSDYk0k2",
+  "model_id": "eleven_multilingual_v2",
+  "clips": {
+    "v1-01": {
+      "file": "vo/v1-01.mp3",
+      "speech_s": 7.941,
+      "budget_s": 8,
+      "fit": "TIGHT",
+      "text": "Minor Hotels is one of the world's fastest-growing hospitality groups. But its next breakthrough won't be a building. It'll be a platform."
+    },
+    "v1-02": {
+      "file": "vo/v1-02.mp3",
+      "speech_s": 12.957,
+      "budget_s": 11,
+      "fit": "OVER",
+      "text": "Today: five hundred and ninety hotels, across sixty-three countries, on six continents. The plan \u2014 one thousand properties by twenty twenty-nine, and eighty percent of that growth is asset-light."
+    },
+    "v1-03": {
+      "file": "vo/v1-03.mp3",
+      "speech_s": 6.548,
+      "budget_s": 7,
+      "fit": "TIGHT",
+      "text": "Growth at that speed only works if every new hotel can plug in fast. And right now, it can't."
+    },
+    "v1-04": {
+      "file": "vo/v1-04.mp3",
+      "speech_s": 10.774,
+      "budget_s": 11,
+      "fit": "TIGHT",
+      "text": "Because behind every property sits the same problem: twelve or more disconnected systems. Oracle. S-A-P. Salesforce. Jira. A separate login for every one."
+    },
+    "v1-05": {
+      "file": "vo/v1-05.mp3",
+      "speech_s": 9.149,
+      "budget_s": 9,
+      "fit": "OVER",
+      "text": "Every task means hunting for the right tool. Every new hotel means wiring all twelve together \u2014 a process that takes months, not days."
+    },
+    "v1-06": {
+      "file": "vo/v1-06.mp3",
+      "speech_s": 8.313,
+      "budget_s": 9,
+      "fit": "TIGHT",
+      "text": "So staff work around it, running guest requests through personal WhatsApp and public A-I, outside anything secure or on-brand."
+    },
+    "v1-07": {
+      "file": "vo/v1-07.mp3",
+      "speech_s": 16.811,
+      "budget_s": 13,
+      "fit": "OVER",
+      "text": "And the industry has noticed. Marriott is spending one-point-one billion dollars to replatform. Wyndham's franchise portal drove ninety-six percent retention. And Mews, valued at two-point-five billion, is coming for independent hotels."
+    },
+    "v1-08": {
+      "file": "vo/v1-08.mp3",
+      "speech_s": 7.57,
+      "budget_s": 8,
+      "fit": "TIGHT",
+      "text": "The math is simple. If Minor doesn't unify its own systems, someone else will sell that unity to its franchisees."
+    },
+    "v1-09": {
+      "file": "vo/v1-09.mp3",
+      "speech_s": 4.04,
+      "budget_s": 6,
+      "fit": "OK",
+      "text": "So what if all twelve systems spoke one language? Meet Meridian."
+    },
+    "v1-10": {
+      "file": "vo/v1-10.mp3",
+      "speech_s": 12.492,
+      "budget_s": 11,
+      "fit": "OVER",
+      "text": "Meridian is a single intelligence layer that sits on top of everything Minor already owns. One login. One portal. Every legacy system still running underneath, untouched."
+    },
+    "v1-11": {
+      "file": "vo/v1-11.mp3",
+      "speech_s": 13.932,
+      "budget_s": 11,
+      "fit": "OVER",
+      "text": "Ask it for last month's P and L and today's V-I-P arrivals, and it gathers both \u2014 across Oracle, the property system, and loyalty \u2014 in seconds. Ask once. It finds everything."
+    },
+    "v1-12": {
+      "file": "vo/v1-12.mp3",
+      "speech_s": 8.359,
+      "budget_s": 10,
+      "fit": "OK",
+      "text": "High impact. Light lift. No rip-and-replace. This is how Minor scales to a thousand hotels, and the moment to build it is now."
+    },
+    "v1-13": {
+      "file": "vo/v1-13.mp3",
+      "speech_s": 4.412,
+      "budget_s": 6,
+      "fit": "OK",
+      "text": "Meridian. The intelligence layer for Minor's asset-light future."
+    },
+    "v2-01": {
+      "file": "vo/v2-01.mp3",
+      "speech_s": 9.149,
+      "budget_s": 8,
+      "fit": "OVER",
+      "text": "You've seen the problem: twelve systems, twelve logins, months to onboard a single hotel. This is the answer. This is Meridian."
+    },
+    "v2-02": {
+      "file": "vo/v2-02.mp3",
+      "speech_s": 8.87,
+      "budget_s": 9,
+      "fit": "TIGHT",
+      "text": "It starts with one identity. A single secure login replaces all twelve, for every Minor hotel, owner, and operating partner."
+    },
+    "v2-03": {
+      "file": "vo/v2-03.mp3",
+      "speech_s": 10.31,
+      "budget_s": 11,
+      "fit": "TIGHT",
+      "text": "Inside is the command center. Revenue, occupancy, tonight's V-I-P arrivals, live operations \u2014 the entire property on one calm surface."
+    },
+    "v2-04": {
+      "file": "vo/v2-04.mp3",
+      "speech_s": 10.124,
+      "budget_s": 10,
+      "fit": "OVER",
+      "text": "And every legacy system from before? Still here \u2014 quietly connected in the sidebar, feeding Meridian in real time. Nothing was ripped out."
+    },
+    "v2-05": {
+      "file": "vo/v2-05.mp3",
+      "speech_s": 10.542,
+      "budget_s": 10,
+      "fit": "OVER",
+      "text": "At its heart is conversational A-I. Ask it anything \u2014 last month's P and L, today's arrivals \u2014 and it answers instantly, from across every system."
+    },
+    "v2-06": {
+      "file": "vo/v2-06.mp3",
+      "speech_s": 15.65,
+      "budget_s": 13,
+      "fit": "OVER",
+      "text": "But it doesn't just answer. It acts. A guest in room two-oh-three reports the air conditioning isn't cooling. One request opens the work order, dispatches engineering, and drafts the guest's apology \u2014 three systems, one approval."
+    },
+    "v2-07": {
+      "file": "vo/v2-07.mp3",
+      "speech_s": 5.619,
+      "budget_s": 6,
+      "fit": "TIGHT",
+      "text": "One ask. Three systems. Zero tabs. The complexity simply disappears."
+    },
+    "v2-08": {
+      "file": "vo/v2-08.mp3",
+      "speech_s": 9.613,
+      "budget_s": 9,
+      "fit": "OVER",
+      "text": "And Meridian follows the work \u2014 the front desk, the housekeeping cart, the general manager's office. Every role, every device, one platform."
+    },
+    "v2-09": {
+      "file": "vo/v2-09.mp3",
+      "speech_s": 11.842,
+      "budget_s": 11,
+      "fit": "OVER",
+      "text": "Underneath, it unifies six service domains: distribution, guest and loyalty, finance, workforce, brand standards, and procurement \u2014 into a single operator surface."
+    },
+    "v2-10": {
+      "file": "vo/v2-10.mp3",
+      "speech_s": 12.028,
+      "budget_s": 12,
+      "fit": "OVER",
+      "text": "And it's built to grow four ways \u2014 Owned, Managed, Franchise, or Affiliate. The deeper the relationship, the deeper the integration. But everyone gets the same premium Meridian."
+    },
+    "v2-11": {
+      "file": "vo/v2-11.mp3",
+      "speech_s": 11.842,
+      "budget_s": 10,
+      "fit": "OVER",
+      "text": "So a new franchisee keeps their existing property system and still goes live on day one. Distribution, loyalty, and brand standards, switched on in days, not months."
+    },
+    "v2-12": {
+      "file": "vo/v2-12.mp3",
+      "speech_s": 10.588,
+      "budget_s": 10,
+      "fit": "OVER",
+      "text": "That is how five hundred and ninety hotels becomes one thousand. Anantara, Avani, Tivoli, N-H, Oaks, and more \u2014 all under one intelligent surface."
+    },
+    "v2-13": {
+      "file": "vo/v2-13.mp3",
+      "speech_s": 3.808,
+      "budget_s": 6,
+      "fit": "OK",
+      "text": "Meridian. The intelligence layer of Minor Hotels."
+    }
+  }
+}
