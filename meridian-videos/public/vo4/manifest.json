@@ -1,0 +1,30 @@
+{
+  "voice": "Sarah",
+  "clips": {
+    "o1": {
+      "file": "vo4/o1.mp3",
+      "speech_s": 3.39,
+      "beat": "open"
+    },
+    "o2": {
+      "file": "vo4/o2.mp3",
+      "speech_s": 6.548,
+      "beat": "friction"
+    },
+    "o3": {
+      "file": "vo4/o3.mp3",
+      "speech_s": 7.755,
+      "beat": "sketch"
+    },
+    "o4": {
+      "file": "vo4/o4.mp3",
+      "speech_s": 6.037,
+      "beat": "ground"
+    },
+    "o5": {
+      "file": "vo4/o5.mp3",
+      "speech_s": 7.384,
+      "beat": "close"
+    }
+  }
+}

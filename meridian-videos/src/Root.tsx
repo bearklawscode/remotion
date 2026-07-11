@@ -9,6 +9,7 @@ import { Video2_Franchising, video2Scenes } from "./Video2_Franchising";
 import { CoverV1, CoverV2 } from "./Covers";
 import { Video3_Deck, video3List } from "./Video3_Deck";
 import { totalFrames3 } from "./timing3";
+import { Video4_Product, VIDEO4_FRAMES } from "./Video4_Product";
 
 export const Fonts: React.FC = () => <style dangerouslySetInnerHTML={{ __html: FONT_FACE_CSS }} />;
 
@@ -53,6 +54,19 @@ export const RemotionRoot: React.FC = () => {
           </>
         )}
         durationInFrames={totalFrames3(video3List)}
+        fps={FPS}
+        width={W}
+        height={H}
+      />
+      <Composition
+        id="Video4"
+        component={() => (
+          <>
+            <Fonts />
+            <Video4_Product />
+          </>
+        )}
+        durationInFrames={VIDEO4_FRAMES}
         fps={FPS}
         width={W}
         height={H}
