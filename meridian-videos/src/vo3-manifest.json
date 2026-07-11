@@ -1,0 +1,100 @@
+{
+  "voice": "Matilda",
+  "clips": {
+    "s01": {
+      "file": "vo3/s01.mp3",
+      "speech_s": 17.508,
+      "slide": "Title"
+    },
+    "s02": {
+      "file": "vo3/s02.mp3",
+      "speech_s": 17.647,
+      "slide": "The Scale"
+    },
+    "s03": {
+      "file": "vo3/s03.mp3",
+      "speech_s": 13.746,
+      "slide": "The Convergence"
+    },
+    "s04": {
+      "file": "vo3/s04.mp3",
+      "speech_s": 19.273,
+      "slide": "Vector One"
+    },
+    "s05": {
+      "file": "vo3/s05.mp3",
+      "speech_s": 19.923,
+      "slide": "Vector Two"
+    },
+    "s06": {
+      "file": "vo3/s06.mp3",
+      "speech_s": 22.291,
+      "slide": "Vector Three"
+    },
+    "s07": {
+      "file": "vo3/s07.mp3",
+      "speech_s": 18.437,
+      "slide": "The Meridian Layer"
+    },
+    "s08": {
+      "file": "vo3/s08.mp3",
+      "speech_s": 25.775,
+      "slide": "Why Now"
+    },
+    "s09": {
+      "file": "vo3/s09.mp3",
+      "speech_s": 16.625,
+      "slide": "What It Is"
+    },
+    "s10": {
+      "file": "vo3/s10.mp3",
+      "speech_s": 20.945,
+      "slide": "Six Service Domains"
+    },
+    "s11": {
+      "file": "vo3/s11.mp3",
+      "speech_s": 17.09,
+      "slide": "The Challenge"
+    },
+    "s12": {
+      "file": "vo3/s12.mp3",
+      "speech_s": 14.443,
+      "slide": "The Operator Surface"
+    },
+    "s13": {
+      "file": "vo3/s13.mp3",
+      "speech_s": 17.043,
+      "slide": "The Growth Model"
+    },
+    "s14": {
+      "file": "vo3/s14.mp3",
+      "speech_s": 15.0,
+      "slide": "Fast Franchise"
+    },
+    "s15": {
+      "file": "vo3/s15.mp3",
+      "speech_s": 15.464,
+      "slide": "For the Franchisee"
+    },
+    "s16": {
+      "file": "vo3/s16.mp3",
+      "speech_s": 12.817,
+      "slide": "Operational Intelligence"
+    },
+    "s17": {
+      "file": "vo3/s17.mp3",
+      "speech_s": 19.365,
+      "slide": "The Disruptor"
+    },
+    "s18": {
+      "file": "vo3/s18.mp3",
+      "speech_s": 23.127,
+      "slide": "The Approach"
+    },
+    "s19": {
+      "file": "vo3/s19.mp3",
+      "speech_s": 17.229,
+      "slide": "The Point of Reference"
+    }
+  }
+}
