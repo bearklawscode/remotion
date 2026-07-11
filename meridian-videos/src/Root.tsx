@@ -6,6 +6,7 @@ import { FPS, W, H } from "./theme";
 import { totalFrames } from "./timing";
 import { Video1_Ecosystem, video1Scenes } from "./Video1_Ecosystem";
 import { Video2_Franchising, video2Scenes } from "./Video2_Franchising";
+import { CoverV1, CoverV2 } from "./Covers";
 
 export const Fonts: React.FC = () => <style dangerouslySetInnerHTML={{ __html: FONT_FACE_CSS }} />;
 
@@ -41,6 +42,8 @@ export const RemotionRoot: React.FC = () => {
         width={W}
         height={H}
       />
+      <Composition id="CoverV1" component={CoverV1} durationInFrames={Math.round(4.5 * FPS)} fps={FPS} width={W} height={H} />
+      <Composition id="CoverV2" component={CoverV2} durationInFrames={Math.round(4.5 * FPS)} fps={FPS} width={W} height={H} />
     </>
   );
 };
