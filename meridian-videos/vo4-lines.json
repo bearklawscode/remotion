@@ -1,0 +1,11 @@
+{
+  "comment": "Video 4 — collaborative product film. Sparse warm narration (Sarah) at emotional beats; on-screen captions + mockups + music carry the rest (show, don't tell). Humble, inviting-discussion tone. ~540 chars to fit remaining EL budget.",
+  "voice": { "chosen_voice_id": "EXAVITQu4vr4xnSDxMaL", "chosen_voice_name": "Sarah", "model_id": "eleven_multilingual_v2" },
+  "lines": [
+    { "id": "o1", "beat": "open", "text": "For a while now, we've kept noticing the same quiet thing." },
+    { "id": "o2", "beat": "friction", "text": "The people who run our hotels are remarkable — but the tools ask them to hold too much, across too many places." },
+    { "id": "o3", "beat": "sketch", "text": "So we started sketching what one calmer surface could feel like. What you're seeing is rough — a first draft, thinking out loud." },
+    { "id": "o4", "beat": "ground", "text": "Not just a screen for headquarters — something that helps in the moment, wherever the work actually happens." },
+    { "id": "o5", "beat": "close", "text": "We don't think we have all of it right yet. But if we get this even close, everything after it gets easier. We'd love your thoughts." }
+  ]
+}
