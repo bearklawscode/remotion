@@ -1,0 +1,95 @@
+{
+  "voice": "Matilda",
+  "clips": {
+    "o01": {
+      "file": "vo4b/o01.mp3",
+      "speech_s": 3.529,
+      "beat": "open"
+    },
+    "o02": {
+      "file": "vo4b/o02.mp3",
+      "speech_s": 8.87,
+      "beat": "thesis"
+    },
+    "o03": {
+      "file": "vo4b/o03.mp3",
+      "speech_s": 6.362,
+      "beat": "problem"
+    },
+    "o04": {
+      "file": "vo4b/o04.mp3",
+      "speech_s": 5.526,
+      "beat": "move"
+    },
+    "o05": {
+      "file": "vo4b/o05.mp3",
+      "speech_s": 5.387,
+      "beat": "whatis"
+    },
+    "o06": {
+      "file": "vo4b/o06.mp3",
+      "speech_s": 7.523,
+      "beat": "dashboard"
+    },
+    "o07": {
+      "file": "vo4b/o07.mp3",
+      "speech_s": 8.359,
+      "beat": "ai"
+    },
+    "o08": {
+      "file": "vo4b/o08.mp3",
+      "speech_s": 7.291,
+      "beat": "knowledge"
+    },
+    "o09": {
+      "file": "vo4b/o09.mp3",
+      "speech_s": 3.808,
+      "beat": "mobile"
+    },
+    "o10": {
+      "file": "vo4b/o10.mp3",
+      "speech_s": 2.554,
+      "beat": "frontdesk"
+    },
+    "o11": {
+      "file": "vo4b/o11.mp3",
+      "speech_s": 3.529,
+      "beat": "booking"
+    },
+    "o12": {
+      "file": "vo4b/o12.mp3",
+      "speech_s": 6.966,
+      "beat": "finance"
+    },
+    "o13": {
+      "file": "vo4b/o13.mp3",
+      "speech_s": 6.455,
+      "beat": "loyalty"
+    },
+    "o14": {
+      "file": "vo4b/o14.mp3",
+      "speech_s": 8.22,
+      "beat": "omfa"
+    },
+    "o15": {
+      "file": "vo4b/o15.mp3",
+      "speech_s": 3.344,
+      "beat": "connected"
+    },
+    "o16": {
+      "file": "vo4b/o16.mp3",
+      "speech_s": 5.805,
+      "beat": "personas"
+    },
+    "o17": {
+      "file": "vo4b/o17.mp3",
+      "speech_s": 5.898,
+      "beat": "bigpic"
+    },
+    "o18": {
+      "file": "vo4b/o18.mp3",
+      "speech_s": 3.39,
+      "beat": "close"
+    }
+  }
+}

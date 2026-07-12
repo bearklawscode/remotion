@@ -101,9 +101,9 @@ export const ColdOpen: React.FC = () => {
             <div style={{ width: 14, height: 14, background: C.gold, transform: "rotate(45deg)", margin: "0 10px", opacity: line, boxShadow: "0 0 16px rgba(160,138,79,0.7)" }} />
             <div style={{ flex: line, height: 4, background: C.gold, transformOrigin: "left center" }} />
           </div>
-          {/* byline */}
-          <div style={{ marginTop: 30, fontFamily: FONT.sans, fontSize: 26, fontWeight: 700, letterSpacing: "0.52em", color: C.goldSoft, opacity: byline, transform: `translateY(${(1 - byline) * 12}px)`, paddingLeft: "0.52em" }}>
-            BY MINOR HOTELS
+          {/* byline — the tagline (must match the End Card exactly) */}
+          <div style={{ marginTop: 30, fontFamily: FONT.sans, fontSize: 21, fontWeight: 700, letterSpacing: "0.30em", color: C.goldSoft, opacity: byline, transform: `translateY(${(1 - byline) * 12}px)`, paddingLeft: "0.30em", textAlign: "center" }}>
+            THE INTELLIGENCE LAYER OF MINOR HOTELS
           </div>
         </div>
       </AbsoluteFill>
@@ -171,13 +171,15 @@ export const Thesis: React.FC = () => {
 /* ================================================================ */
 /* 3 · PROBLEM — great people, tools scatter & drift (300f)          */
 /* ================================================================ */
-// deterministic scatter across the mid band (golden-angle spiral, widened)
-const scatterPos = (i: number, cy = 600) => {
+// deterministic scatter — a CONTAINED central cluster (golden-angle spiral).
+// Tighter radius + smaller multipliers keep chips in the middle band, clear of
+// the top headline and the bottom turn (user note: less chaotic, don't overlap text).
+const scatterPos = (i: number, cy = 560) => {
   const a = (i * 137.5 * Math.PI) / 180;
-  const r = 250 + (i % 5) * 66;
+  const r = 150 + (i % 4) * 54; // 150..312, contained
   return {
-    x: 960 + Math.cos(a) * r * 1.72,
-    y: cy + Math.sin(a) * r * 0.72,
+    x: 960 + Math.cos(a) * r * 1.15,
+    y: cy + Math.sin(a) * r * 0.7,
   };
 };
 
@@ -187,20 +189,20 @@ export const Problem: React.FC = () => {
 
   return (
     <Stage>
-      {/* chips fly in scattered + continuous chaotic drift */}
+      {/* chips fly in to a contained central cluster + gentle contained drift */}
       {LOGOS.map((src, i) => {
-        const base = scatterPos(i, 600);
+        const base = scatterPos(i, 560);
         const d = 18 + i * 4;
-        const s = spring({ frame: frame - d, fps, config: { damping: 13, stiffness: 110, mass: 0.8 } });
-        // fly inward from further out
-        const fromX = 960 + (base.x - 960) * 1.55;
-        const fromY = 600 + (base.y - 600) * 1.55;
+        const s = spring({ frame: frame - d, fps, config: { damping: 15, stiffness: 120, mass: 0.8 } });
+        // fly inward from just outside the cluster (not from far off-screen)
+        const fromX = 960 + (base.x - 960) * 1.35;
+        const fromY = 560 + (base.y - 560) * 1.35;
         const x = fromX + (base.x - fromX) * s;
         const y = fromY + (base.y - fromY) * s;
-        // jitter drift
-        const jx = Math.sin((frame + i * 33) / 21) * 13 + Math.cos((frame + i * 17) / 15) * 7;
-        const jy = Math.cos((frame + i * 23) / 18) * 12 + Math.sin((frame + i * 11) / 26) * 7;
-        const rot = Math.sin((frame + i * 40) / 27) * 5;
+        // small contained drift (floaty, not chaotic)
+        const jx = Math.sin((frame + i * 33) / 24) * 6 + Math.cos((frame + i * 17) / 19) * 3;
+        const jy = Math.cos((frame + i * 23) / 21) * 6 + Math.sin((frame + i * 11) / 28) * 3;
+        const rot = Math.sin((frame + i * 40) / 30) * 3;
         return (
           <div key={src} style={{ position: "absolute", left: x + jx - 32, top: y + jy - 32, transform: `rotate(${rot}deg)`, opacity: rmp(frame, d - 4, d + 8) }}>
             <Chip src={src} size={64} />
@@ -208,6 +210,8 @@ export const Problem: React.FC = () => {
         );
       })}
 
+      {/* top scrim keeps the headline crisp above the drifting cluster */}
+      <div style={{ position: "absolute", left: 0, right: 0, top: 0, height: 340, background: "linear-gradient(180deg, rgba(19,33,60,0.96), rgba(19,33,60,0.72) 55%, transparent)", pointerEvents: "none" }} />
       {/* top headline */}
       <div style={{ position: "absolute", left: 130, top: 96, right: 130 }}>
         <Kicker delay={4}>THE FRICTION</Kicker>

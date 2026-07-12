@@ -1,0 +1,24 @@
+{
+  "comment": "Video 4 v3 — confident Matilda narration over upbeat music. Grounded in the Meridian deck. Open and close use the SAME tagline: 'the intelligence layer of Minor Hotels'.",
+  "voice": { "chosen_voice_id": "XrExE9yKIg1WjnnlVkGX", "chosen_voice_name": "Matilda", "model_id": "eleven_multilingual_v2" },
+  "lines": [
+    { "id": "o01", "beat": "open", "text": "This is Meridian — the intelligence layer of Minor Hotels." },
+    { "id": "o02", "beat": "thesis", "text": "The strategy is set: from five hundred and ninety hotels today, toward one thousand by twenty twenty-nine. The technology has to match." },
+    { "id": "o03", "beat": "problem", "text": "Great hotels run on great people. But their work is scattered across more than a dozen disconnected systems." },
+    { "id": "o04", "beat": "move", "text": "So we built one surface — a single, intelligent layer over everything Minor already runs." },
+    { "id": "o05", "beat": "whatis", "text": "One login. Every system underneath. A home for conversational, agentic AI." },
+    { "id": "o06", "beat": "dashboard", "text": "For a general manager, it's the whole property in one view — revenue, arrivals, and every operation, live." },
+    { "id": "o07", "beat": "ai", "text": "Ask once, and it acts — opening the work order, dispatching the team, and reassuring the guest, across three systems at once." },
+    { "id": "o08", "beat": "knowledge", "text": "For every staff member, the right answer arrives the moment they ask — brand standards and know-how, in plain language." },
+    { "id": "o09", "beat": "mobile", "text": "It works in every hand, from the front desk to the housekeeping cart." },
+    { "id": "o10", "beat": "frontdesk", "text": "Guests are recognized the moment they arrive." },
+    { "id": "o11", "beat": "booking", "text": "And to the guest, it simply feels like one, seamless Minor." },
+    { "id": "o12", "beat": "finance", "text": "For owners, clarity — consolidated reporting, trust accounting, and disbursements, in real time." },
+    { "id": "o13", "beat": "loyalty", "text": "Every Minor Discovery member is recognized, with guest intelligence no third party will ever have." },
+    { "id": "o14", "beat": "omfa", "text": "It scales to any model — owned, managed, franchise, or affiliate — live in days, on the systems partners already run." },
+    { "id": "o15", "beat": "connected", "text": "Nothing is ripped out. Meridian is simply the layer above." },
+    { "id": "o16", "beat": "personas", "text": "Whoever you are — manager, staff, owner, or guest — there's a surface built for you." },
+    { "id": "o17", "beat": "bigpic", "text": "One platform. Six service domains. Every role, every property — integrated." },
+    { "id": "o18", "beat": "close", "text": "Meridian. The intelligence layer of Minor Hotels." }
+  ]
+}

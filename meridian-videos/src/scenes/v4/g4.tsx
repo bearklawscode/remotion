@@ -490,17 +490,18 @@ export const EndCard: React.FC = () => {
         <div
           style={{
             fontFamily: FONT.sans,
-            fontSize: 26,
+            fontSize: 21,
             fontWeight: 700,
-            letterSpacing: "0.42em",
+            letterSpacing: "0.30em",
             color: "#fff",
             marginTop: 30,
-            paddingLeft: "0.42em",
+            paddingLeft: "0.30em",
             opacity: minor,
             transform: `translateY(${(1 - minor) * 10}px)`,
+            textAlign: "center",
           }}
         >
-          MINOR HOTELS
+          THE INTELLIGENCE LAYER OF MINOR HOTELS
         </div>
       </div>
 

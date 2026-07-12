@@ -122,7 +122,7 @@ export const Dashboard: React.FC = () => {
   const K = 0.78;
   const OX = (1920 - 1920 * K) / 2; // 211.2
   const OY = 202;
-  const rev = spring({ frame: frame - 34, fps, config: { damping: 200, stiffness: 90 } });
+  const rev = spring({ frame: frame - 24, fps, config: { damping: 200, stiffness: 90 } });
 
   // dashboard-internal → frame coords (for the motivated camera push)
   const f = (dx: number, dy: number): [number, number] => [OX + dx * K, OY + dy * K];
@@ -130,7 +130,8 @@ export const Dashboard: React.FC = () => {
   const [r2x, r2y] = f(1219, 470);
   const [r3x, r3y] = f(1694, 470);
 
-  const times = [0, 60, 106, 235, 256, 360, 382, 470, 522, 540];
+  // compressed, punchy tour (fits a 330f slot)
+  const times = [0, 30, 60, 130, 150, 210, 230, 300, 315, 330];
   const cx = kf(frame, times, [960, 960, r1x, r1x, r2x, r2x, r3x, r3x, 960, 960]);
   const cy = kf(frame, times, [540, 540, r1y, r1y, r2y, r2y, r3y, r3y, 540, 540]);
   const pz = kf(frame, times, [1, 1, 1.1, 1.1, 1.11, 1.11, 1.11, 1.11, 1, 1]);
@@ -152,36 +153,36 @@ export const Dashboard: React.FC = () => {
           </div>
 
           {/* sequential highlight rings (dashboard-internal coords) */}
-          <SeqRing x={276} y={90} w={396} h={132} at={100} dur={150} label="RevPAR +8.2%" />
-          <SeqRing x={952} y={244} w={528} h={476} at={244} dur={140} label="Tonight's VIPs" />
-          <SeqRing x={1496} y={244} w={392} h={476} at={372} dur={150} label="Live operations" />
+          <SeqRing x={276} y={90} w={396} h={132} at={58} dur={72} label="RevPAR +8.2%" />
+          <SeqRing x={952} y={244} w={528} h={476} at={140} dur={70} label="Tonight's VIPs" />
+          <SeqRing x={1496} y={244} w={392} h={476} at={228} dur={80} label="Live operations" />
 
           {/* a live counter riding on the hero KPI */}
-          {frame >= 108 && frame < 250 && (
-            <div style={{ position: "absolute", left: 690, top: 150, opacity: rmp(frame, 108, 126) * (1 - rmp(frame, 236, 250)), display: "flex", alignItems: "center", gap: 10, background: C.gold, color: "#fff", padding: "10px 18px", borderRadius: 999, boxShadow: "0 14px 40px rgba(160,138,79,0.5)", fontFamily: FONT.sans, fontWeight: 800, fontSize: 26 }}>
-              RevPAR ▲ <Counter to={8.2} from={0} delay={112} durationFrames={40} decimals={1} suffix="%" />
+          {frame >= 62 && frame < 150 && (
+            <div style={{ position: "absolute", left: 690, top: 150, opacity: rmp(frame, 62, 78) * (1 - rmp(frame, 136, 150)), display: "flex", alignItems: "center", gap: 10, background: C.gold, color: "#fff", padding: "10px 18px", borderRadius: 999, boxShadow: "0 14px 40px rgba(160,138,79,0.5)", fontFamily: FONT.sans, fontWeight: 800, fontSize: 26 }}>
+              RevPAR ▲ <Counter to={8.2} from={0} delay={66} durationFrames={36} decimals={1} suffix="%" />
             </div>
           )}
 
           {/* guided cursor tour */}
           <TourCursor
             stops={[
-              { x: 900, y: 560, at: 58 },
-              { x: 470, y: 158, at: 106, tap: true },
-              { x: 1180, y: 460, at: 248, tap: true },
-              { x: 1690, y: 460, at: 378, tap: true },
-              { x: 1690, y: 460, at: 470 },
+              { x: 900, y: 560, at: 24 },
+              { x: 470, y: 158, at: 60, tap: true },
+              { x: 1180, y: 460, at: 140, tap: true },
+              { x: 1690, y: 460, at: 228, tap: true },
+              { x: 1690, y: 460, at: 305 },
             ]}
           />
         </div>
       </div>
 
       {/* incoming toast (frame coords, top-right) */}
-      {frame >= 250 && (
+      {frame >= 150 && (
         <Notification
           title="New VIP arrival"
           body="Isabelle Laurent · Royal Suite · 14:30"
-          at={252}
+          at={152}
           x={1476}
           y={52}
           w={392}
@@ -256,7 +257,7 @@ export const AIAction: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  const TAP = 408;
+  const TAP = 300;
   const panelL = 470;
   const panelW = 980;
 
@@ -287,10 +288,10 @@ export const AIAction: React.FC = () => {
 
       {/* three result cards cascade in */}
       <div style={{ position: "absolute", left: panelL, top: 300, width: panelW, display: "flex", flexDirection: "column", gap: 16 }}>
-        <ResultCard at={150} doneAt={196} title="Work order created" detail="#ENG-2214 · High priority · Room 203" chip={{ label: "Jira", src: "/assets/tech-stack/jira.svg" }} />
-        <ResultCard at={176} doneAt={230} title="Engineering notified" detail="K. Anand on shift · ETA 8 min" chip={{ label: "Teams", src: "/assets/tech-stack/teams.svg" }} />
+        <ResultCard at={70} doneAt={120} title="Work order created" detail="#ENG-2214 · High priority · Room 203" chip={{ label: "Jira", src: "/assets/tech-stack/jira.svg" }} />
+        <ResultCard at={100} doneAt={160} title="Engineering notified" detail="K. Anand on shift · ETA 8 min" chip={{ label: "Teams", src: "/assets/tech-stack/teams.svg" }} />
         <ResultCard
-          at={202}
+          at={130}
           doneAt={TAP}
           title="Guest message drafted"
           detail="Awaiting your approval"
@@ -320,10 +321,10 @@ export const AIAction: React.FC = () => {
       </div>
 
       {/* cursor moves to Approve & send, taps */}
-      <Cursor from={[panelL + 620, 940]} to={[btnX, btnY]} moveAt={366} tapAt={TAP} />
+      <Cursor from={[panelL + 620, 940]} to={[btnX, btnY]} moveAt={258} tapAt={TAP} />
 
       {/* closing caption */}
-      <div style={{ position: "absolute", left: 0, right: 0, bottom: 46, textAlign: "center", opacity: rmp(frame, 438, 460), transform: `translateY(${(1 - rmp(frame, 438, 460)) * 14}px)` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, bottom: 46, textAlign: "center", opacity: rmp(frame, 330, 350), transform: `translateY(${(1 - rmp(frame, 330, 350)) * 14}px)` }}>
         <span style={{ fontFamily: FONT.sans, fontSize: 24, fontWeight: 700, letterSpacing: "0.04em", color: "#fff" }}>
           Three systems. <span style={{ color: C.gold }}>One approval. Zero tabs.</span>
         </span>

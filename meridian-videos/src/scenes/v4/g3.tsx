@@ -264,10 +264,14 @@ export const Booking: React.FC = () => {
 
   return (
     <Stage bg="#FBF6F0">
-      {/* Headline */}
-      <div style={{ position: "absolute", left: 110, top: 190 }}>
+      {/* Headline — "MINOR." forced onto its own second line so the phone
+          (right side) never overlaps it. */}
+      <div style={{ position: "absolute", left: 110, top: 176, width: 820 }}>
         <Kicker>THE GUEST SIDE</Kicker>
-        <Snap white="ONE SEAMLESS" gold="MINOR." size={104} light />
+        <Snap white="ONE SEAMLESS" size={96} light />
+        <div style={{ marginTop: 4 }}>
+          <Snap white="" gold="MINOR." size={96} delay={6} light />
+        </div>
         <div style={{
           marginTop: 30, maxWidth: 560, fontFamily: FONT.serif, fontStyle: "italic",
           fontSize: 27, color: C.inkSoft, opacity: rmp(frame, 44, 66),

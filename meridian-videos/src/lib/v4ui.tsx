@@ -102,7 +102,7 @@ export const MockupNote: React.FC = () => {
   const op = ramp(frame, 10, 26) * 0.6;
   return (
     <div style={{ position: "absolute", right: 26, bottom: 20, fontFamily: FONT.sans, fontSize: 12.5, fontStyle: "italic", color: "rgba(19,33,60,0.5)", opacity: op }}>
-      Illustrative mockup — a rough sketch, open to change.
+      Illustrative product mockup.
     </div>
   );
 };
