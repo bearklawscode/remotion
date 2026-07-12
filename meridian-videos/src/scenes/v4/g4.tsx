@@ -402,8 +402,11 @@ const Decl: React.FC<{ children: React.ReactNode; delay: number; gold?: boolean 
 
 export const Close: React.FC = () => {
   const frame = useCurrentFrame();
-  const groupOut = ramp(frame, 176, 200); // declarations clear
-  const float = Math.sin(frame / 44) * 3; // subtle life on the hold
+  const { fps } = useVideoConfig();
+  const groupOut = ramp(frame, 116, 138); // declarations clear
+  const ctaS = spring({ frame: frame - 132, fps, config: { damping: 200, stiffness: 150 } });
+  const ctaOp = rmp(frame, 130, 150);
+  const rule = ramp(frame, 150, 176);
   return (
     <Stage>
       {/* Phase A — three declarations build, then clear */}
@@ -420,14 +423,15 @@ export const Close: React.FC = () => {
           transform: `translateY(${-groupOut * 40}px)`,
         }}
       >
-        <Decl delay={16}>ONE PLATFORM.</Decl>
-        <Decl delay={52}>EVERY ROLE.</Decl>
-        <Decl delay={90} gold>
+        <Decl delay={12}>ONE PLATFORM.</Decl>
+        <Decl delay={40}>EVERY ROLE.</Decl>
+        <Decl delay={68} gold>
           EVERY PROPERTY.
         </Decl>
       </div>
 
-      {/* Phase B — cinematic wordmark close */}
+      {/* Phase B — the rally call to action (no wordmark here; the single brand
+          lockup lives in the End Card so the tagline shows exactly once) */}
       <div
         style={{
           position: "absolute",
@@ -436,23 +440,19 @@ export const Close: React.FC = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 44,
-          transform: `translateY(${float}px)`,
+          gap: 26,
+          opacity: ctaOp,
+          transform: `translateY(${(1 - ctaS) * 40}px)`,
         }}
       >
-        <WhiteWordmark size={128} appearFrom={206} drawFrom={224} />
-        <div
-          style={{
-            fontFamily: FONT.serif,
-            fontStyle: "italic",
-            fontSize: 34,
-            color: "rgba(255,255,255,0.82)",
-            opacity: rmp(frame, 250, 272),
-            transform: `translateY(${(1 - rmp(frame, 250, 272)) * 12}px)`,
-          }}
-        >
-          The intelligence layer of Minor Hotels.
+        <div style={{ fontFamily: FONT.sans, fontSize: 20, fontWeight: 700, letterSpacing: "0.34em", textTransform: "uppercase", color: C.goldSoft, paddingLeft: "0.34em" }}>
+          The time is now
         </div>
+        <div style={{ fontFamily: FONT.display, fontSize: 118, lineHeight: 1.0, textAlign: "center", color: "#fff" }}>
+          NOW IS THE TIME<br />
+          <span style={{ color: C.gold }}>TO BUILD IT.</span>
+        </div>
+        <div style={{ width: 520, height: 3, background: C.gold, transform: `scaleX(${rule})`, boxShadow: "0 0 18px rgba(160,138,79,0.6)" }} />
       </div>
     </Stage>
   );

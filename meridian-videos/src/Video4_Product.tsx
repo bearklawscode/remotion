@@ -67,14 +67,17 @@ const CUTS: Cut[] = [
   S("Booking", 240, V4.Booking, "o11", true),
   S("Finance", 270, V4.Finance, "o12", true),
   S("Loyalty", 240, V4.Loyalty, "o13", true),
-  S("MontageOps", 360, V4.MontageOps, undefined, true),
-  S("MontageCommercial", 300, V4.MontageCommercial, undefined, true),
+  S("MontageOps", 360, V4.MontageOps, "ops", true),
+  S("MontageCommercial", 300, V4.MontageCommercial, "com", true),
   S("OMFA", 390, V4.OMFA, "o14"),
   S("Connected", 270, V4.Connected, "o15"),
   S("Personas", 240, V4.Personas, "o16"),
   S("BigPicture", 300, V4.BigPicture, "o17"),
-  S("Close", 300, V4.Close),
-  S("EndCard", 180, V4.EndCard, "o18"),
+  // ending crescendo: raise the stakes → hand over the key → rally → single lockup
+  S("WhyNow", 270, V4.WhyNow, "o19"),
+  S("Unlock", 240, V4.Unlock, "o20"),
+  S("Close", 210, V4.Close, "o21"),
+  S("EndCard", 240, V4.EndCard, "o18"),
 ];
 export const VIDEO4_FRAMES = CUTS.reduce((n, c) => n + c.dur, 0);
 
@@ -86,7 +89,12 @@ export const Video4_Product: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: C.ink }}>
       <Sequence durationInFrames={VIDEO4_FRAMES} name="music">
-        <Audio src={staticFile("vo4/music-upbeat.mp3")} volume={0.26} />
+        {/* music bed — gentle fade-out over the final 5s so the ending lands
+            softly. VO clips are separate <Audio> tracks, so they're untouched. */}
+        <Audio
+          src={staticFile("vo4/music-upbeat.mp3")}
+          volume={(f) => interpolate(f, [0, 30, VIDEO4_FRAMES - 150, VIDEO4_FRAMES - 1], [0, 0.26, 0.26, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}
+        />
       </Sequence>
       {placed.map((c, i) => {
         const { C: Comp } = c;
